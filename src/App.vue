@@ -1,5 +1,5 @@
 <template>
-  <div class="card bg-success text-center col-md-6 offset-3 mt-4 pt-0 px-0" id="app">
+  <div class="card bg-success text-center col-md-6 mt-4 pt-0 px-0" id="app" v-bind:class="{'offset-3':checkWindow}">
     <div class="card-header">
     <h1 class="card-title mt-3">Word Translator</h1>
     <h5 class="card-subtitle mt-3 mb-2">Powered by Vue.js</h5>
@@ -22,9 +22,19 @@ export default {
     TranslateForm,
     TranslateOutput
   },
-  data: function(){
-    return{
-      translatedText:''
+  data: 
+      function(){
+        return{
+          translatedText:''
+        }
+      },
+  computed: {
+    checkWindow:function(){
+      if(window.innerWidth > 768){
+        return this.bigWindow = true;
+      } else {
+        return this.bigWindow = false;
+      }
     }
   },
   methods: {
