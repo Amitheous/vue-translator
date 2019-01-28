@@ -1,6 +1,11 @@
-# translator
+# Vue Translator
 
-> Simple Translator App
+A single-word translator built using Vue.js and the Yandex Translate API
+
+# What I Learned
+
+* Working with the Vue CLI
+* Using Components and defining variables and functions within those components
 
 ## Build Setup
 
